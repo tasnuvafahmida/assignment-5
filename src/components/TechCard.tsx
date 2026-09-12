@@ -8,7 +8,7 @@ const [isAdded, setIsAdded] = useState(false)
 
     return (
         <div >
-                        <div className="card bg-base-100  shadow-sm  rounded-2xl  p-5 ">
+                        <div className="card bg-base-100  shadow-sm  rounded-2xl  p-4 h-80">
                             <figure className="justify-between p-3">
                                 <img className="w-7 h-7 mx-3"
                                     src={technology.icon} />
