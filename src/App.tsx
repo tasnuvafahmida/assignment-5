@@ -2,9 +2,6 @@ import Nav from "./components/Nav"
 import Banner from "./components/Banner"
 import Technologies from "./components/Technologies/Technologies";
 import { Suspense, useState } from "react";
-
-
-
 import type { techType } from "./types/techtype";
 import Footer from "./components/Footer";
 

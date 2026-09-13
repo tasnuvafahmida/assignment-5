@@ -1,8 +1,8 @@
-import { useState, type Dispatch, type SetStateAction } from 'react';
+import { type Dispatch, type SetStateAction } from 'react';
 import type { techType } from '../types/techtype';
 import { GoStarFill } from 'react-icons/go';
 import { toast } from 'react-toastify';
-const TechCard = ({ technology, addedTotal, setAddedTotal, addedTechnologies, setAddedTechnologies }: {
+const TechCard = ({ technology, addedTechnologies, setAddedTechnologies }: {
     technology: techType, addedTotal: number, setAddedTotal: Dispatch<SetStateAction<number>>, addedTechnologies: techType[];
     setAddedTechnologies: Dispatch<SetStateAction<techType[]>>
 }) => {

@@ -16,15 +16,15 @@ const AvailableTechs = ({ technologies, addedTotal, setAddedTotal, addedTechnolo
 
     return (
         <div className='grid grid-cols-12 container mx-auto'>
-            <div className="grid grid-cols-3 col-span-9 gap-4 p-4 ml-16 mt-6"> {
-                technologies.map((technology: techType, ind: number) => {
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 col-span-9 gap-4 p-4 ml-16 mt-6"> {
+                technologies.map((technology: techType) => {
                     return <TechCard key={technology.name}
                         technology={technology} addedTotal={addedTotal}
                         setAddedTotal={setAddedTotal}
                         addedTechnologies={addedTechnologies}
                         setAddedTechnologies={setAddedTechnologies} />;
                 })} </div>
-            <div className='col-span-3 p-4 mt-6' ><Sidebar addedTotal={addedTotal} addedTechnologies={addedTechnologies} setAddedTechnologies={setAddedTechnologies} /></div>
+            <div className='col-span-3 p-4 mt-6' ><Sidebar addedTechnologies={addedTechnologies} setAddedTechnologies={setAddedTechnologies} /></div>
 
         </div>)
 };
