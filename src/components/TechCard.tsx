@@ -1,4 +1,4 @@
-import React, { useState, type Dispatch, type SetStateAction } from 'react';
+import { useState, type Dispatch, type SetStateAction } from 'react';
 import type { techType } from '../types/techtype';
 import { GoStarFill } from 'react-icons/go';
 import { toast } from 'react-toastify';

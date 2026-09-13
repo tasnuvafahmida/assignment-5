@@ -1,7 +1,7 @@
 import Nav from "./components/Nav"
 import Banner from "./components/Banner"
 import Technologies from "./components/Technologies/Technologies";
-import React ,{ Suspense, useState } from "react";
+import { Suspense, useState } from "react";
 
 
 
