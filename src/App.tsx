@@ -1,7 +1,10 @@
 import Nav from "./components/Nav"
 import Banner from "./components/Banner"
 import Technologies from "./components/Technologies/Technologies";
-import { Suspense } from "react";
+import React ,{ Suspense, useState } from "react";
+
+
+
 import type { techType } from "./types/techtype";
 
 
@@ -14,12 +17,14 @@ const techFetch = async () :Promise<techType[]> => {
 
 function App() {
   const techPromise = techFetch();
+    const [addedTotal, setAddedTotal] = useState('No technologies selected yet')
+
   return (
     <>
       <Nav></Nav>
       <Banner></Banner>
       <Suspense fallback={<h2>Loading...</h2>}>
-        <Technologies techPromise={techPromise} />
+        <Technologies addedTotal={addedTotal} setAddedTotal={setAddedTotal} techPromise={techPromise} />
       </Suspense>
 
 

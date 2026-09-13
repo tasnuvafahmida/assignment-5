@@ -1,14 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState ,type Dispatch, type SetStateAction} from 'react';
 import type { techType } from '../types/techtype';
 import { GoStarFill } from 'react-icons/go';
-
-const TechCard = ({technology}: {technology : techType }) => {
-
+import { toast } from 'react-toastify';
+const TechCard = ({technology, addedTotal, setAddedTotal,addedTechnologies, setAddedTechnologies}: {technology : techType, addedTotal :string, setAddedTotal : Dispatch<SetStateAction<number>>,addedTechnologies : techType[];
+  setAddedTechnologies: Dispatch<SetStateAction<techType[]>> }) => {
 const [isAdded, setIsAdded] = useState(false)
+
+const handleAddTech = () => {
+
+        setIsAdded(true);
+        toast(`${technology.name} is added successfully`)
+        setAddedTotal(prev => prev + 1);
+
+    };
+
 
     return (
         <div >
-                        <div className="card bg-base-100  shadow-sm  rounded-2xl  p-4 h-80">
+                        <div className="card bg-base-100  shadow-sm  rounded-2xl  p-5 h-90">
                             <figure className="justify-between p-3">
                                 <img className="w-7 h-7 mx-3"
                                     src={technology.icon} />
@@ -28,7 +37,7 @@ const [isAdded, setIsAdded] = useState(false)
                                         {technology.rating}</div>
                                 </div>
                                 <div className="card-actions justify-centre mt-2">
-                                    <button onClick={()=> setIsAdded(true)}
+                                    <button onClick={()=> handleAddTech()}
                                      className="btn btn-wide bg-[#0A0F1D] text-white w-full h-9 rounded-lg" disabled={isAdded? true: false}>{isAdded ===true?'Added Successfully' :'Add to Stack'}</button>
                                 </div>
         
