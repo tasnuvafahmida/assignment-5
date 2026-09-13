@@ -7,7 +7,7 @@ import AddedTechnologies from './AddedTechnologies';
 
 
 interface TechProps{
-    techPromise: Promise<techType[]>; addedTotal:string; setAddedTotal : Dispatch<SetStateAction<number>>
+    techPromise: Promise<techType[]>; addedTotal:number; setAddedTotal : Dispatch<SetStateAction<number>>
 }
 const Technologies = ({techPromise, addedTotal, setAddedTotal}:TechProps) => {
     const technologies = use(techPromise);

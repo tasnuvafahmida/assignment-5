@@ -17,7 +17,7 @@ const techFetch = async () :Promise<techType[]> => {
 
 function App() {
   const techPromise = techFetch();
-    const [addedTotal, setAddedTotal] = useState('No technologies selected yet')
+    const [addedTotal, setAddedTotal] = useState(0)
 
   return (
     <>
