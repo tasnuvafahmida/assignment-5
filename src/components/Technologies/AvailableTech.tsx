@@ -18,7 +18,7 @@ const AvailableTechs = ({ technologies, addedTotal, setAddedTotal, addedTechnolo
         <div className='grid grid-cols-12 container mx-auto'>
             <div className="grid grid-cols-3 col-span-9 gap-4 p-4 ml-16 mt-6"> {
                 technologies.map((technology: techType, ind: number) => {
-                    return <TechCard key={ind}
+                    return <TechCard key={technology.name}
                         technology={technology} addedTotal={addedTotal}
                         setAddedTotal={setAddedTotal}
                         addedTechnologies={addedTechnologies}

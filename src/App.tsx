@@ -6,6 +6,7 @@ import React ,{ Suspense, useState } from "react";
 
 
 import type { techType } from "./types/techtype";
+import Footer from "./components/Footer";
 
 
 const techFetch = async () :Promise<techType[]> => {
@@ -26,6 +27,7 @@ function App() {
       <Suspense fallback={<h2>Loading...</h2>}>
         <Technologies addedTotal={addedTotal} setAddedTotal={setAddedTotal} techPromise={techPromise} />
       </Suspense>
+      <Footer/>
 
 
 
