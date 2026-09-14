@@ -12,8 +12,8 @@ const Technologies = ({techPromise}:TechProps) => {
 
 
     return  ( <div>
-            <div className="mt-28 container mx-auto pl-28">
-            <p className="text-[36px] font-bold"> Explore the <span className="text-[36px] text-transparent bg-clip-text font-extrabold " style={{backgroundImage: "var(--gradient)" }}> Technologies</span> </p>
+            <div className="mt-20 lg:mt-28 container mx-auto px-4 lg:pl-28">
+            <p className="text-3xl md:text-[36px] font-bold"> Explore the <span className="text-[36px] text-transparent bg-clip-text font-extrabold " style={{backgroundImage: "var(--gradient)" }}> Technologies</span> </p>
             <p className="text-[18px] text-[#475569]">Pick one technology per category to build your ideal stack.</p> </div>
             <AvailableTech technologies ={technologies} addedTechnologies={addedTechnologies} setAddedTechnologies= {setAddedTechnologies} />
         </div>
