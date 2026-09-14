@@ -1,5 +1,6 @@
 import type { Dispatch, SetStateAction } from "react";
 import type { techType } from "../types/techtype";
+import { toast} from 'react-toastify'
 
 interface SidebarProps {
     addedTechnologies: techType[];
@@ -15,10 +16,12 @@ const Sidebar = ({
         setAddedTechnologies((prev) =>
             prev.filter((tech) => tech.name !== technologyName)
         );
+        toast.info(`${technologyName} removed from your stack.`);
     };
 
     const handleRemoveAll = () => {
         setAddedTechnologies([]);
+        toast.info("All technologies removed from your stack.");
     };
 
     return (

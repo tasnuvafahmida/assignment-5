@@ -3,7 +3,7 @@ import type { techType } from '../types/techtype';
 import { GoStarFill } from 'react-icons/go';
 import { toast } from 'react-toastify';
 const TechCard = ({ technology, addedTechnologies, setAddedTechnologies }: {
-    technology: techType, addedTotal: number, setAddedTotal: Dispatch<SetStateAction<number>>, addedTechnologies: techType[];
+    technology: techType, addedTechnologies: techType[];
     setAddedTechnologies: Dispatch<SetStateAction<techType[]>>
 }) => {
     const isAdded = addedTechnologies.some(
@@ -51,7 +51,6 @@ const TechCard = ({ technology, addedTechnologies, setAddedTechnologies }: {
                     <div className="card-actions justify-centre mt-2">
                         <button
                             onClick={handleAddTech}
-                            disabled={isAdded}
                             className="btn btn-wide bg-[#0A0F1D] text-white w-full h-9 rounded-lg"
                         >
                             {isAdded
